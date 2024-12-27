@@ -645,4 +645,13 @@ public class EtoileLibrary {
         let _ = try await client?.send(path)
         
     }
+    public func logout() {
+        print("Logout")
+        let keychain = SimpleKeychain(service: "etoile")
+        do {
+            try keychain.deleteAll()
+        } catch {
+            print("logout failed for some reason!")
+        }
+    }
 }
