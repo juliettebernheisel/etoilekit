@@ -10,6 +10,6 @@ import JellyfinAPI
 
 public struct Lyrics {
     public let lines: [LyricLine]?
-    public let offset: Int? // Has to be Int because JellyfinAPI package doesn't support Int64
+    public let offset: Int64?
     public let synced: Bool?
 }
